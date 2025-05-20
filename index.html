@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driggs Meat Market - Polish Food in Brooklyn</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #d43f3a; /* A warm, inviting red */
+            color: #fff;
+            padding: 1em 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #d43f3a;
+            border-bottom: 2px solid #d43f3a;
+            padding-bottom: 0.5em;
+            margin-bottom: 1em;
+        }
+
+        #hero {
+            background-color: #fce8e8; /* Light background for the hero section */
+            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            border-radius: 8px;
+        }
+
+        .hero-image {
+            width: 300px;
+            height: 200px;
+            background-image: url('images/inside_store.jpg'); /* Replace with the actual image path */
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-text {
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .hero-text h1 {
+            color: #333;
+            margin-bottom: 0.5em;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #d43f3a;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1em;
+        }
+
+        .button:hover {
+            background-color: #c13530;
+        }
+
+        .product-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .category {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .category h3 {
+            color: #d43f3a;
+            margin-top: 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Driggs Meat Market</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-image">
+                </div>
+            <div class="hero-text">
+                <h1>Authentic Polish Products in the Heart of Brooklyn</h1>
+                <p>Discover a wide selection of high-quality cold cuts, traditional Polish foods, and delicious ready-to-eat meals.</p>
+                <a href="#products" class="button">View Our Products</a>
+            </div>
+        </section>
+
+        <section id="products">
+            <h2>Our Specialties</h2>
+            <div class="product-categories">
+                <div class="category">
+                    <h3>Cold Cuts</h3>
+                    <p>A variety of traditional Polish sausages, hams, and more.</p>
+                    </div>
+                <div class="category">
+                    <h3>Polish Products</h3>
+                    <p>Imported groceries and ingredients to bring authentic Polish flavors to your home.</p>
+                    </div>
+                <div class="category">
+                    <h3>Ready to Eat</h3>
+                    <p>Delicious homemade Polish meals, perfect for a quick and satisfying bite.</p>
+                    </div>
+                </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Driggs Meat Market is a family-owned and operated store dedicated to providing the Brooklyn community with the finest Polish foods. [You can add more details about the store's history and values here].</p>
+            </section>
+
+        <section id="contact">
+            <h2>Visit Us</h2>
+            <p><strong>Address:</strong> 160 Driggs Ave, Brooklyn, NY 11222</p>
+            <p><strong>Phone:</strong> (718) 349-3602</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.163487499818!2d-73.95038732370858!3d40.71784277131898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2594ee2a84c45%3A0x135625f62856d85d!2sDriggs%20Meat%20Market!5e0!3m2!1sen!2sus!4v1716169508179!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer"></iframe>
+            </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Driggs Meat Market. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // You can add any JavaScript here if needed later
+    </script>
+</body>
+</html>
