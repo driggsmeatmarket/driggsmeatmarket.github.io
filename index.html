@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-10VGM1MFK3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
+
       gtag('config', 'G-10VGM1MFK3');
     </script>
 
@@ -29,13 +28,14 @@
             color: #fff;
             padding: 1em 20px;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column; /* Stack logo and nav on smaller screens */
+            align-items: center; /* Center items on smaller screens */
         }
 
         .logo {
             font-size: 1.8em;
             font-weight: bold;
+            margin-bottom: 10px; /* Add some space below the logo */
         }
 
         nav ul {
@@ -43,12 +43,16 @@
             padding: 0;
             margin: 0;
             display: flex;
+            justify-content: center; /* Center navigation links */
+            flex-wrap: wrap; /* Allow links to wrap to the next line if needed */
         }
 
         nav ul li a {
             color: #fff;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 5px 10px; /* Adjust margin for smaller screens */
+            padding: 8px 12px; /* Add some padding for touch targets */
+            border-radius: 5px; /* Add a bit of touch target spacing */
         }
 
         nav ul li a:hover {
@@ -68,21 +72,24 @@
             border-bottom: 2px solid #d43f3a;
             padding-bottom: 0.5em;
             margin-bottom: 1em;
+            text-align: center; /* Center headings on smaller screens */
         }
 
         #hero {
             background-color: #fce8e8; /* Light background for the hero section */
-            padding: 40px 20px;
+            padding: 20px; /* Reduce padding on smaller screens */
             display: flex;
+            flex-direction: column; /* Stack image and text on smaller screens */
             align-items: center;
-            justify-content: center;
+            text-align: center; /* Center text in the hero section */
             gap: 20px;
             border-radius: 8px;
         }
 
         .hero-image {
-            width: 220px;
-            height: 220px;
+            width: 80%; /* Make image take up more width on smaller screens */
+            max-width: 300px; /* Maintain a maximum width */
+            height: auto; /* Maintain aspect ratio */
             background-image: url('./store.png'); /* Replace with the actual image path */
             background-size: cover;
             background-position: center;
@@ -91,12 +98,11 @@
         }
 
         .hero-text {
-            max-width: 500px;
-            text-align: center;
+            max-width: 90%; /* Allow text to take up more width */
         }
 
         .hero-text h1 {
-            color: #333;
+            font-size: 1.8em; /* Adjust font size for smaller screens */
             margin-bottom: 0.5em;
         }
 
@@ -108,6 +114,7 @@
             text-decoration: none;
             border-radius: 5px;
             margin-top: 1em;
+            font-size: 1em; /* Adjust font size for smaller screens */
         }
 
         .button:hover {
@@ -116,7 +123,7 @@
 
         .product-categories {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Stack categories on smaller screens */
             gap: 20px;
         }
 
@@ -125,11 +132,13 @@
             padding: 20px;
             border-radius: 5px;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center category content */
         }
 
         .category h3 {
             color: #d43f3a;
             margin-top: 0;
+            font-size: 1.2em; /* Adjust font size */
         }
 
         #social-media {
@@ -143,6 +152,7 @@
         #social-media h2 {
             color: #d43f3a;
             margin-bottom: 1em;
+            font-size: 1.5em; /* Adjust font size */
         }
 
         #social-media a {
@@ -152,9 +162,11 @@
             padding: 15px 30px;
             text-decoration: none;
             border-radius: 8px;
-            font-size: 1.2em;
+            font-size: 1.1em; /* Adjust font size */
             font-weight: bold;
             transition: background-color 0.3s ease;
+            width: 80%; /* Make the button wider on smaller screens */
+            max-width: 300px; /* Set a maximum width */
         }
 
         #social-media a:hover {
@@ -165,8 +177,12 @@
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 1em 0;
+            padding: 1em 20px; /* Adjust padding */
             margin-top: 40px;
+            display: flex;
+            flex-direction: column; /* Stack footer links */
+            align-items: center;
+            gap: 10px; /* Add spacing between footer links */
         }
 
         footer a {
@@ -177,6 +193,41 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        /* Media Query for screens smaller than 768px (typical mobile devices) */
+        @media (max-width: 768px) {
+            header {
+                padding: 1em 10px; /* Further reduce padding */
+            }
+
+            nav ul {
+                flex-direction: column; /* Stack navigation links vertically */
+                align-items: center; /* Center them */
+            }
+
+            nav ul li a {
+                margin: 5px 0; /* Adjust margin for stacked links */
+                width: 80%; /* Make links take up more width */
+                text-align: center; /* Center link text */
+                border-radius: 8px; /* More rounded for touch */
+            }
+
+            #hero {
+                padding: 20px 10px; /* Adjust hero padding */
+            }
+
+            .product-categories {
+                padding: 0 10px; /* Adjust product category padding */
+            }
+
+            .category {
+                padding: 15px; /* Adjust category padding */
+            }
+
+            #social-media {
+                padding: 20px 10px; /* Adjust social media padding */
+            }
+        }
     </style>
 </head>
 <body>
@@ -184,11 +235,11 @@
         <div class="logo">Driggs Meat Market</div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="https://www.instagram.com/driggsmeatmarket/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                <li><a href="#home" class="nav-link" data-event-category="Navigation" data-event-action="Click" data-event-label="Home">Home</a></li>
+                <li><a href="#products" class="nav-link" data-event-category="Navigation" data-event-action="Click" data-event-label="Products">Products</a></li>
+                <li><a href="#about" class="nav-link" data-event-category="Navigation" data-event-action="Click" data-event-label="About Us">About Us</a></li>
+                <li><a href="#contact" class="nav-link" data-event-category="Navigation" data-event-action="Click" data-event-label="Contact">Contact</a></li>
+                <li><a href="https://www.instagram.com/driggsmeatmarket/" target="_blank" rel="noopener noreferrer" class="nav-link" data-event-category="Navigation" data-event-action="Click" data-event-label="Instagram Nav">Instagram</a></li>
             </ul>
         </nav>
     </header>
@@ -200,7 +251,7 @@
             <div class="hero-text">
                 <h1>Authentic Polish Products in the Heart of Brooklyn</h1>
                 <p>Discover a wide selection of high-quality cold cuts, traditional Polish foods, and delicious ready-to-eat meals.</p>
-                <a href="#products" class="button">View Our Products</a>
+                <a href="#products" class="button" id="view-products-button" data-event-category="Hero Section" data-event-action="Click" data-event-label="View Products Button">View Our Products</a>
             </div>
         </section>
 
@@ -229,26 +280,75 @@
 
         <section id="contact">
             <h2>Email Us</h2>
-            <a href="mailto:driggsmeatmarket@gmail.com">driggsmeatmarket@gmail.com</a>
+            <a href="mailto:driggsmeatmarket@gmail.com" id="email-link" data-event-category="Contact" data-event-action="Click" data-event-label="Email Link">driggsmeatmarket@gmail.com</a>
             <h2>Visit Us</h2>
             <p><strong>Address:</strong> 160 Driggs Ave, Brooklyn, NY 11222</p>
-            <p><strong>Phone:</strong> (718) 349-3602</p>
+            <p><strong>Phone:</strong> <a href="tel:+17183493602" id="phone-link" data-event-category="Contact" data-event-action="Click" data-event-label="Phone Number">(718) 349-3602</a></p>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.740888577113!2d-73.9508489!3d40.7171679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2594ee2a84c45%3A0x135625f62856d85d!2sDriggs%20Meat%20Market!5e0!3m2!1sen!2sus!4v1716161308194!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer"></iframe>
         </section>
     </main>
 
     <section id="social-media">
         <h2>Follow Us on Instagram</h2>
-        <a href="https://www.instagram.com/driggsmeatmarket/" target="_blank" rel="noopener noreferrer">View Our Instagram</a>
+        <a href="https://www.instagram.com/driggsmeatmarket/" target="_blank" rel="noopener noreferrer" id="instagram-button" data-event-category="Social Media" data-event-action="Click" data-event-label="Instagram Main Button">View Our Instagram</a>
     </section>
 
     <footer>
         <p>© 2025 Driggs Meat Market. All rights reserved.</p>
-        <a href="https://www.instagram.com/driggsmeatmarket/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.instagram.com/driggsmeatmarket/" target="_blank" rel="noopener noreferrer" id="instagram-footer-link" data-event-category="Footer" data-event-action="Click" data-event-label="Instagram Footer Link">Instagram</a>
     </footer>
 
     <script>
-        // You can add any JavaScript here if needed later
+        // Function to send a Google Analytics event
+        function trackEvent(category, action, label) {
+            if (typeof gtag === 'function') { // Check if gtag is loaded
+                gtag('event', action, {
+                    'event_category': category,
+                    'event_label': label
+                });
+                console.log(`GA Event: Category=${category}, Action=${action}, Label=${label}`); // For debugging
+            } else {
+                console.warn('gtag is not defined. Google Analytics not loaded yet.');
+            }
+        }
+
+        // --- Event Listeners ---
+
+        // 1. Navigation Links
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', function() {
+                const category = this.dataset.eventCategory || 'Navigation';
+                const action = this.dataset.eventAction || 'Click';
+                const label = this.dataset.eventLabel || this.textContent;
+                trackEvent(category, action, label);
+            });
+        });
+
+        // 2. "View Our Products" Button (Hero Section)
+        document.getElementById('view-products-button')?.addEventListener('click', function() {
+            trackEvent('Hero Section', 'Click', 'View Products Button');
+        });
+
+        // 3. Email Link
+        document.getElementById('email-link')?.addEventListener('click', function() {
+            trackEvent('Contact', 'Click', 'Email Link');
+        });
+
+        // 4. Phone Number Link
+        document.getElementById('phone-link')?.addEventListener('click', function() {
+            trackEvent('Contact', 'Click', 'Phone Number');
+        });
+
+        // 5. Main Instagram Button (Social Media Section)
+        document.getElementById('instagram-button')?.addEventListener('click', function() {
+            trackEvent('Social Media', 'Click', 'Instagram Main Button');
+        });
+
+        // 6. Footer Instagram Link
+        document.getElementById('instagram-footer-link')?.addEventListener('click', function() {
+            trackEvent('Footer', 'Click', 'Instagram Footer Link');
+        });
+
     </script>
 </body>
 </html>
